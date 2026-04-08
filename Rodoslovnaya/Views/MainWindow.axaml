@@ -20,7 +20,25 @@
         <!-- Занимает левую часть между верхом и низом -->
         <Border DockPanel.Dock="Left" BorderBrush="Gray" BorderThickness="0 0 1 0">
             <StackPanel Width="150" Background="LightGray">
-                <TextBlock Text="Навигация" Margin="10" />
+                <TextBlock Text="Родословная" Margin="10" />
+                <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/avalonia-logo.ico" Width="16" Height="16" Margin="0 0 8 0"/>
+                        <TextBlock Text="Дерево"/>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/avalonia-logo.ico" Width="16" Height="16" Margin="0 0 8 0"/>
+                        <TextBlock Text="Люди"/>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Assets/avalonia-logo.ico" Width="16" Height="16" Margin="0 0 8 0"/>
+                        <TextBlock Text="Настройки"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Border>
 
@@ -33,7 +51,13 @@
 
         <!-- Занимает нижнюю часть во всю оставшуюся ширину -->
         <Border DockPanel.Dock="Bottom" Height="25" Background="GhostWhite" BorderBrush="Gray" BorderThickness="0 1 0 0">
-            <TextBlock Text="Готово" VerticalAlignment="Center" />
+            <StackPanel  Orientation="Horizontal">
+
+                <TextBlock Text="Строка состояния:" VerticalAlignment="Center" Margin="5 0 0 0"/>
+
+                <TextBlock Text="Информация" VerticalAlignment="Center" Margin="5 0 0 0"/>
+
+            </StackPanel>
         </Border>
 
         <!-- Последний элемент заполняет центр -->
