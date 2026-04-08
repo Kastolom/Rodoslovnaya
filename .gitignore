@@ -1,0 +1,47 @@
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# .NET
+*.user
+*.userprefs
+*.rsuser
+*.assemblyInfo.cs
+
+# NuGet
+packages/
+*.nupkg
+.nuget/
+project.lock.json
+project.assets.json
+project.assets.*.json
+
+# Avalonia
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
