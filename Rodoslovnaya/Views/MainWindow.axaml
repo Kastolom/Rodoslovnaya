@@ -11,10 +11,42 @@
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <DockPanel LastChildFill="True">
+
+        <!-- Занимает левую часть между верхом и низом -->
+        <Border DockPanel.Dock="Left" BorderBrush="Gray" BorderThickness="0 0 1 0">
+            <StackPanel Width="150" Background="LightGray">
+                <TextBlock Text="Навигация" Margin="10" />
+            </StackPanel>
+        </Border>
+
+        <!-- Занимает верхнюю часть во всю ширину -->
+        <Border DockPanel.Dock="Top" BorderBrush="Gray" BorderThickness="0 0 0 1">
+            <Menu Background="GhostWhite">
+                <MenuItem Header="Файл" />
+            </Menu>
+        </Border>
+
+        <!-- Занимает нижнюю часть во всю оставшуюся ширину -->
+        <Border DockPanel.Dock="Bottom" Height="25" Background="GhostWhite" BorderBrush="Gray" BorderThickness="0 1 0 0">
+            <TextBlock Text="Готово" VerticalAlignment="Center" />
+        </Border>
+
+        <!-- Последний элемент заполняет центр -->
+        <Grid Background="White" RowDefinitions="*, 1, *">
+
+            <TextBlock Grid.Row="0" Text="Верхняя часть контента" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+            <GridSplitter Grid.Row="1" Background="GhostWhite" BorderBrush="LightGray" BorderThickness="0 1 0 1" ResizeDirection="Rows"/>
+
+            <TextBlock Grid.Row="2" Text="Нижняя часть контента" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        </Grid>
+    </DockPanel>
+    <!-- <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
 
 </Window>
