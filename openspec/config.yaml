@@ -1,0 +1,28 @@
+schema: spec-driven
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+context: |
+  # Project: Родословная (Genealogy/Family Tree Desktop Application)
+  Tech stack: C# .NET 10.0, Avalonia 11.3.12 (cross-platform UI framework), CommunityToolkit.Mvvm 8.2.1, Microsoft.Data.Sqlite 10.0.5
+  Description: Desktop application for creating and managing family trees
+  Architecture: MVVM pattern with ViewModelBase base class
+  Conventions:
+    - Private fields use underscore prefix (_fieldName) following CommunityToolkit.Mvvm conventions
+    - ViewModels inherit from ViewModelBase which extends ObservableObject
+    - Models are in the Models folder
+    - ViewModels are in the ViewModels folder
+    - Views use Avalonia .axaml format
+    - Nullable reference types enabled
+    - Use 'partial' keyword for ViewModels
+  Database: SQLite (Microsoft.Data.Sqlite)
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+rules:
+  proposal:
+    - Keep proposals under 500 words
+    - Always include a "Non-goals" section
+  tasks:
+    - Break tasks into chunks of max 2 hours
